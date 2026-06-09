@@ -2,20 +2,21 @@
 public class Main {
     public static void main(String[] args) {
 
-        Produto p1 = new Produto("Caneta", 2.50);
-        Produto p2 = new Produto("Caderno", 15.00);
+        Livro l1 = new Livro("Clean Code", "978-0132350884");
+        Livro l2 = new Livro("Clean Code", "978-0132350884");
+        System.out.println(l1 == l2); // ?
+        System.out.println(l1.equals(l2)); // ?
 
-        System.out.println(p1);
-        System.out.println(p2);
-
-        System.out.println("Item: " + p1);
-        System.out.println("Item: " + p2);
-
-        /*
-        Produto{nome='Caneta', preco=2.5}
-        Produto{nome='Caderno', preco=15.0}
-
-        O toString() é chamado automaticamente no println e na concatenação com +.
-         */
     }
 }
+
+/*
+
+O comportamento padrão do metodo equals na classe
+Object é usar o operador ==.
+
+Sem sobrescrever override o metodo, ele continua
+comparando apenas os endereços de memória, ignorando
+o conteúdo dos atributos.
+
+ */
