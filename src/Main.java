@@ -12,10 +12,10 @@ public class Main {
         System.out.println("Item: " + p2);
 
         /*
-        roduto@6d06d69c
-        Produto@7852e922
+        Produto{nome='Caneta', preco=2.5}
+        Produto{nome='Caderno', preco=15.0}
 
-        Não é legível (mostra referência de memória).
+        O toString() é chamado automaticamente no println e na concatenação com +.
          */
     }
 }
