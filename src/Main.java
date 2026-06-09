@@ -2,7 +2,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Livro l1 = new Livro("Clean Code", "978-0132350884");
+        Livro l1 = new Livro("Clean Code 2", "978-0132350884");
         Livro l2 = new Livro("Clean Code", "978-0132350884");
         System.out.println(l1 == l2); // ?
         System.out.println(l1.equals(l2)); // ?
@@ -11,12 +11,10 @@ public class Main {
 }
 
 /*
+ os livros são iguais
 
-O comportamento padrão do metodo equals na classe
-Object é usar o operador ==.
+não lança a execução
 
-Sem sobrescrever override o metodo, ele continua
-comparando apenas os endereços de memória, ignorando
-o conteúdo dos atributos.
-
+Porque é único para cada livro.
+Título pode repetir ou variar.
  */
